@@ -1,0 +1,63 @@
+.big {
+    transform: scale(1.15);
+    background: #9A1212;
+}
+
+.big a { color: #fff; }
+
+.big:hover {
+    transform: scale(1.15);
+    background: #9A1212;
+}
+
+.company_info {
+    grid-row: 3/4;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 1fr 1fr;
+    font-size: 30px;
+    text-align: right;
+}
+
+.f_wrap {
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    align-self: center;
+}
+
+.f_wrap img{
+    width: 100%;
+}
+
+.company_info > p {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+@media screen and (max-width: 1650px){
+    .company_info {
+        font-size: 25px;
+    }
+    .company_info > p {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .f_wrap {
+        grid-template-columns: 150px 1fr;
+    }
+    .company_info {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .f_wrap {
+        grid-template-columns: 100px 1fr;
+    }
+    .company_info {
+        font-size: 14px;
+    }
+}

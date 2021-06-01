@@ -1,0 +1,47 @@
+.hei100 {
+    height: 60vh;
+}
+
+.sheet-4 {
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+.rect-1 {
+    position: absolute;
+    width: 105px;
+    height: 290px;
+    background: #C4C4C4;
+    border-radius: 40px;
+}
+.rect-2 {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    width: 170px;
+    height: 290px;
+    border-radius: 40px;
+    
+}
+
+.pr-1 {
+    background: url('../img/p1.png');
+}
+
+.pr-2 {
+    background: url('../img/p2.png');
+}
+
+.pr-3 {
+    background: url('../img/p3.png');
+}
+
+.pr-4 {
+    background: url('../img/p4.png');
+}
+
+.pr-5 {
+    background: url('../img/p5.png');
+}
+

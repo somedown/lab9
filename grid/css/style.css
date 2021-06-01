@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Jost', sans-serif;
+}
+
+#page-1 {
+    position: relative;
+    height: 100vh;
+    background: #9A1212;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 1fr 70px;
+}
+
+.wrapper {
+    position: relative;
+    grid-row: 2/3;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 55px 1fr 1fr 55px;
+    justify-content: end;
+    padding-right: 60px;
+    box-sizing: border-box;
+}
+
+.bg_img {
+    position: absolute;
+    height: 100%;
+    z-index: 1;
+}
+
+.vetka {
+    position: absolute;
+    height: 250px;
+    top: 50%;
+    left: 5%
+}
+
+.wrapper *:not(.bg_img) {
+    z-index: 100;
+}
+
+.btns {
+    display: grid;
+    width: 700px;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 50px;
+}
+
+.btn {
+    width: 100%;
+    background: #fff;
+    border-radius: 25px;
+    display: grid;
+}
+
+.btn a {
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    color: #000;
+    font-size: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #F3F3F3;
+}
+
+.wrapper p {
+    color: #fff;
+    text-align: right;
+}
+
+.t {
+    font-size: 100px;
+    align-self: center;
+}
+
+.t-2 {
+    font-size: 100px;
+    letter-spacing: 40px;
+    margin-left: 350px;
+    z-index: 100;
+}
+.d {
+    font-size: 25px;
+    max-width: 700px;
+}
+
+.detail {
+    grid-column: 3/4;
+}
+
+.wrapper-2 {
+    position: relative;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 60px 30px 100px 1fr 120px;
+}
+
+.side-1 {
+    background: #9A1212;
+    height: 100%;
+}
+
+.side-2 {
+    background: #F3F3F3;
+    height: 100%;
+}
+
+
+
+.slider {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    column-gap: 40px;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.slider img:first-child {
+    justify-self: end;
+}
+
+.product img{
+    width: 100%;
+}
+.product a {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+
+}
+.product p {
+    color: #9A1212;
+    font-size: 30px;
+    text-align: center;
+}
+
+.footer {
+    height: 100%;
+    background: #F3F3F3;
+    display: grid;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 60px;
+    font-size: 25px;
+    z-index: 1;
+}
+.vetka-1 {
+    position: absolute;
+    right: 20%;
+    bottom: 0;
+    height: 70vh;
+    z-index: 60;
+}
+.vetka-2 {
+    position: absolute;
+    right: 15%;
+    height: 100vh;
+    bottom: 0;
+    z-index: 60;
+}
+
+@media screen and (max-width: 1400px){
+    .bg_img, .vetka{
+        display: none;
+    }
+    .wrapper {
+        justify-content: center;
+        padding-right: 0;
+    }
+    .wrapper p {
+        text-align: center;
+    }
+    .btns {
+        width: 600px;
+        justify-self: center;
+    }
+    .detail {
+        grid-column: 2/3;
+    }
+    .t-2 {
+        font-size: 70px;
+        justify-self: center;
+        margin: 0;
+    }
+    .slider {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .slider > img {
+        height: 60px;
+    }
+    .vetka-1 {
+        right: 10%;
+    }
+    .vetka-2 {
+        right: 0;
+    }
+
+}
+
+@media screen and (max-height: 800px) {
+    /* .wrapper {
+        grid-template-rows: 55px 1fr 1fr 55px 1fr;
+    } */
+    .t {
+        font-size: 70px;
+        align-self: center;
+    }
+    
+    .d {
+        font-size: 22px;
+        max-width: 700px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .footer {
+        z-index: 100;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .t-2 {
+        font-size: 40px;
+        letter-spacing: 30px;
+    }
+    .btn a{
+        font-size: 17px;
+    }
+    .btns {
+        width: 500px;
+    }
+    .wrapper {
+        grid-template-rows: 40px 1fr 1fr 40px;
+    }
+    .slider {
+        grid-template-columns: repeat(4, 1fr)
+    }
+    .p-3 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .p-2 {
+        display: none;
+    }
+    .slider {
+        grid-template-columns: repeat(3, 1fr)
+    }
+    .vetka-1, .vetka-2 {
+        display: none;
+    }
+    .footer {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .t-2 {
+        font-size: 30px;
+        letter-spacing: 15px;
+        margin-top: 15px;
+    }
+    .wrapper {
+        grid-template-rows: 35px 1fr 1fr 35px;
+    }
+    .btn a{
+        font-size: 17px;
+    }
+    .btns {
+        width: 340px;
+        column-gap: 22px;
+    }
+    .t {
+        font-size: 50px;
+        align-self: center;
+    }
+    
+    .d {
+        font-size: 18px;
+        max-width: 700px;
+    }
+}
